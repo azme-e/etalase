@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Keuangan - Template Digital Premium</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS tambahan khusus untuk layout detail produk. 
+           Bisa dipindahkan ke bagian bawah file style.css Anda. */
+        .product-page { max-width: 1100px; margin: 60px auto; padding: 0 20px; font-family: 'Inter', sans-serif; }
+        
+        /* Layout Split Screen */
+        .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: start; }
+        @media (max-width: 768px) { .split-layout { grid-template-columns: 1fr; } }
+        
+        /* Bagian Kiri (Galeri Media) */
+        .media-gallery { display: flex; flex-direction: column; gap: 24px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .product-preview { width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); object-fit: cover; }
+        
+        /* Bagian Kanan (Info Produk & CTA) */
+        .product-info { display: flex; flex-direction: column; justify-content: center; }
+        .product-title { font-size: 2.25rem; color: #0f172a; margin-bottom: 8px; font-weight: 700; line-height: 1.2; }
+        .product-tagline { font-size: 1.15rem; color: #475569; margin-bottom: 24px; font-weight: 500; }
+        .product-price { font-size: 2rem; color: #10b981; font-weight: 700; margin-bottom: 24px; }
+        .product-desc { color: #64748b; line-height: 1.7; margin-bottom: 32px; font-size: 1rem; }
+        
+        /* Tombol CTA */
+        .cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn { padding: 14px 24px; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+        .btn-primary { background-color: #0f172a; color: white; border: 2px solid #0f172a; flex: 1; min-width: 200px; }
+        .btn-primary:hover { background-color: #334155; border-color: #334155; }
+        .btn-whatsapp { background-color: white; color: #10b981; border: 2px solid #10b981; flex: 1; min-width: 200px; }
+        .btn-whatsapp:hover { background-color: #f0fdf4; }
+
+        /* Bagian Tab Informasi */
+        .tabs-section { margin-top: 80px; }
+        .tab-buttons { display: flex; border-bottom: 1px solid #cbd5e1; margin-bottom: 24px; overflow-x: auto; white-space: nowrap; }
+        .tab-btn { background: none; border: none; padding: 16px 32px; font-size: 1rem; font-weight: 600; color: #64748b; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px; transition: all 0.2s ease; }
+        .tab-btn.active { color: #10b981; border-bottom-color: #10b981; }
+        .tab-btn:hover:not(.active) { color: #0f172a; }
+        .tab-content { display: none; padding: 16px 0; color: #475569; line-height: 1.7; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: block; }
+        .tab-content ul { padding-left: 20px; }
+        .tab-content li { margin-bottom: 12px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <main class="product-page">
+        <section class="split-layout">
+            
+            <div class="media-gallery">
+                <div class="video-container">
+                    <iframe id="youtube-player" src="" allowfullscreen title="Video Demonstrasi Produk"></iframe>
+                </div>
+                <img id="product-photo" src="" alt="Preview Dashboard Keuangan" class="product-preview">
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">Dashboard Keuangan</h1>
+                <p class="product-tagline">Ambil Kendali Atas Keuangan Anda dengan Sekali Klik.</p>
+                <div class="product-price">Rp 99.000</div>
+                
+                <p class="product-desc">
+                    Template ini dirancang untuk mempermudah Anda mencatat arus kas, melacak pemasukan, dan merekap pengeluaran bulanan. Nikmati fitur auto-chart yang menyajikan kesehatan finansial Anda dalam grafik visual secara real-time tanpa perlu paham rumus rumit.
+                </p>
+                
+                <div class="cta-group">
+                    <a href="https://lynk.id/username_anda/produk1" class="btn btn-primary" target="_blank">Beli Instan via Lynk.id</a>
+                    <a href="https://wa.me/6281234567890?text=Halo+Kak,+saya+tertarik+dengan+Template+Dashboard+Keuangan,+apakah+masih+tersedia?" class="btn btn-whatsapp" target="_blank">Tanya Lewat WhatsApp</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="tabs-section">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab(event, 'fitur')">Fitur Utama</button>
+                <button class="tab-btn" onclick="openTab(event, 'isi')">Apa yang Anda Dapatkan</button>
+                <button class="tab-btn" onclick="openTab(event, 'cara')">Cara Penggunaan / FAQ</button>
+            </div>
+
+            <div id="fitur" class="tab-content active">
+                <ul>
+                    <li><strong>Auto-Chart Visual:</strong> Grafik otomatis yang langsung terbentuk saat Anda menginput pengeluaran.</li>
+                    <li><strong>Kategori Kustom:</strong> Ubah pos pengeluaran sesuai dengan gaya hidup dan kebutuhan Anda.</li>
+                    <li><strong>Budget Tracking:</strong> Sistem pemantau anggaran agar keuangan Anda tidak membengkak di akhir bulan.</li>
+                    <li><strong>Ringkasan Tahunan:</strong> Tabel rekapitulasi untuk melihat tren uang masuk & keluar selama setahun penuh.</li>
+                </ul>
+            </div>
+
+            <div id="isi" class="tab-content">
+                <ul>
+                    <li>1x File Template Excel/Spreadsheet Premium Siap Pakai.</li>
+                    <li>Video Tutorial (Langkah demi langkah cara pengisian data dari nol).</li>
+                    <li>Akses bebas untuk pembaruan (update) template seumur hidup.</li>
+                </ul>
+            </div>
+
+            <div id="cara" class="tab-content">
+                <h3>Cara Penggunaan:</h3>
+                <p>Setelah Anda mengunduh template, cukup buka menggunakan Microsoft Excel atau Google Sheets. Mulailah memasukkan data awal Anda di lembar kerja "Pemasukan", dan catat setiap transaksi harian di lembar kerja "Pengeluaran". Semua grafik dan total hitungan akan bekerja otomatis secara ajaib.</p>
+                <br>
+                <h3>FAQ:</h3>
+                <p><strong>T: Apakah saya perlu menguasai rumus Excel?</strong><br>
+                J: Sama sekali tidak! Semua rumus (seperti SUM, IF, VLOOKUP) sudah kami buat dan kunci dengan aman. Anda murni hanya perlu mengetikkan angka layaknya menggunakan kalkulator.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // ==============================================================
+        // VARIABEL KONSTAN: Ubah ID Video dan Nama File Gambar Di Sini
+        // ==============================================================
+        
+        // 1. ID YOUTUBE: Ambil 11 karakter unik di belakang URL video YouTube Anda
+        const VIDEO_YOUTUBE_ID = "BBD8sWzcmOo"; 
+        
+        // 2. FOTO PRODUK: Sesuaikan dengan nama gambar di folder images
+        const FILE_FOTO_PRODUK = "images/produk1.png";
+        
+        // ==============================================================
+        
+        // Eksekusi: Memasukkan Video dan Foto secara dinamis ke halaman web
+        document.getElementById("youtube-player").src = `https://www.youtube.com/embed/${VIDEO_YOUTUBE_ID}`;
+        document.getElementById("product-photo").src = FILE_FOTO_PRODUK;
+
+        // Fungsi Logika untuk Navigasi Tab / Accordion Bawah
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            
+            // Sembunyikan seluruh konten tab
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            
+            // Matikan warna aktif di seluruh tombol
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Tampilkan tab yang dipilih
+            document.getElementById(tabName).style.display = "block";
+            
+            // Jalankan animasi & beri status aktif pada tombol
+            setTimeout(() => { document.getElementById(tabName).className += " active"; }, 10);
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

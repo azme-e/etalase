@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etalase Produk Digital & Kelas Privat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Tingkatkan Produktivitas & Kendalikan Finansial Anda dengan Template Digital Premium</h1>
+            <p>Solusi praktis dan instan untuk mengelola keuangan, merawat kendaraan, mengatur uang saku, hingga menguasai Excel dari nol.</p>
+            <a href="#products" class="btn btn-primary">Lihat Koleksi Produk</a>
+        </div>
+    </header>
+
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Produk & Layanan Unggulan Kami</h2>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="card-img-placeholder">
+                        <img id="img-prod-1" alt="Dashboard Keuangan">
+                    </div>
+                    <div class="card-content">
+                        <h3>Dashboard Keuangan</h3>
+                        <p>Catat arus kas, pemasukan, dan pengeluaran bulanan dengan grafik otomatis berbasis Excel/Notion.</p>
+                        <a href="produk1.html" class="btn btn-outline">Pelajari Selengkapnya</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-img-placeholder">
+                        <img id="img-prod-2" alt="Motocare Perawatan Motor">
+                    </div>
+                    <div class="card-content">
+                        <h3>Motocare Perawatan Motor</h3>
+                        <p>Logbook digital interaktif untuk melacak riwayat servis, ganti oli, dan biaya kendaraan Anda.</p>
+                        <a href="produk2.html" class="btn btn-outline">Pelajari Selengkapnya</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-img-placeholder">
+                        <img id="img-prod-3" alt="Saku Siswa">
+                    </div>
+                    <div class="card-content">
+                        <h3>Saku Siswa</h3>
+                        <p>Template ramah pelajar untuk mengelola uang jajan, target tabungan, dan kebutuhan sekolah.</p>
+                        <a href="produk3.html" class="btn btn-outline">Pelajari Selengkapnya</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-img-placeholder">
+                        <img id="img-prod-4" alt="Kelas Privat Rumus Excel">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kelas Privat Excel</h3>
+                        <p>Kuasai rumus dari basic hingga advanced (VLOOKUP, Pivot) langsung dari mentor berpengalaman.</p>
+                        <a href="produk4.html" class="btn btn-outline">Pelajari Selengkapnya</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Dashboard keuangannya sangat membantu! Sekarang saya tahu persis kemana bocornya gaji bulanan saya."</p>
+                    <h4>— Budi S.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Template Motocare bikin saya gak pernah telat ganti oli lagi. Sangat praktis dan mudah digunakan di HP."</p>
+                    <h4>— Andi R.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Kelas privat Excelnya juara. Mentornya sabar dan materinya langsung bisa diaplikasikan di kerjaan kantor."</p>
+                    <h4>— Siti A.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Etalase Produk Digital. Hak Cipta Dilindungi.</p>
+            <div class="footer-links">
+                <a href="#">Tentang Kami</a>
+                <a href="#">Hubungi Admin</a>
+                <a href="#">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mendefinisikan lokasi file gambar menggunakan const
+        const FOTO_PRODUK_1 = "images/produk1.png"; // [cite: 8]
+        const FOTO_PRODUK_2 = "images/produk2.png"; // [cite: 9]
+        const FOTO_PRODUK_3 = "images/produk3.png"; // [cite: 10]
+        const FOTO_PRODUK_4 = "images/produk4.png"; // [cite: 11]
+
+        // Menyematkan path gambar secara dinamis ke dalam elemen HTML
+        document.getElementById('img-prod-1').src = FOTO_PRODUK_1;
+        document.getElementById('img-prod-2').src = FOTO_PRODUK_2;
+        document.getElementById('img-prod-3').src = FOTO_PRODUK_3;
+        document.getElementById('img-prod-4').src = FOTO_PRODUK_4;
+    </script>
+</body>
+</html>
