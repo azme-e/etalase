@@ -548,21 +548,19 @@ button {
     border: 0;
 }
 
+
+/* Wadah Pratinjau Foto Produk */
+
 .photo-preview-container {
     width: 100%;
     height: 100%;
-    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f8fafc;
     overflow: hidden;
-}
-
-@media (min-width: 640px) {
-    .photo-preview-container {
-        aspect-ratio: 16 / 9;
-    }
+    /* Mengikuti aspek rasio video 16:9 secara global (Mobile & Desktop) */
+    aspect-ratio: 16 / 9;
 }
 
 .photo-preview-container img {
