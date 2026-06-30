@@ -124,22 +124,27 @@ button {
     object-fit: contain;
 }
 
+
+/* Pembungkus Tombol WA dan Hamburger agar sejajar */
+
 .header-actions {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+
+/* Kotak Tombol Konsultasi WA */
+
 .btn-konsultasi {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
     background-color: #4b5563;
-    color: white;
-    padding: 0.375rem 1rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
+    /* Kotak abu-abu */
+    padding: 6px 16px;
+    border-radius: 50px;
+    text-decoration: none;
     transition: background-color 0.2s;
 }
 
@@ -147,27 +152,44 @@ button {
     background-color: #374151;
 }
 
-.btn-konsultasi svg {
-    width: 1rem;
-    height: 1rem;
-    color: #22c55e;
-    fill: currentColor;
+
+/* Ukuran Ikon WA */
+
+.btn-konsultasi .wa-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
 }
+
+
+/* Teks "Konsultasi Gratis" */
+
+.btn-konsultasi .teks-konsultasi {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    /* Memaksa teks berwarna putih */
+    display: block;
+}
+
+
+/* Tombol Hamburger */
 
 .btn-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #94a3b8;
-    padding: 0.375rem;
-    border-radius: 0.25rem;
-    transition: color 0.2s;
-}
-
-.btn-hamburger:hover {
-    color: white;
+    padding: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-hamburger svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 24px;
+    height: 24px;
     stroke: currentColor;
 }
 
