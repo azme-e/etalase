@@ -5,52 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Produk - Dashboard Keuangan Premium</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body>
 
-    <header class="fixed top-0 left-0 w-full z-50 shadow-md">
-        <div class="bg-white py-2 flex justify-center items-center border-b border-slate-100">
-            <a href="https://wa.me/6287888884049" target="_blank" class="inline-flex items-center bg-gray-600 hover:bg-gray-700 text-white text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full transition-colors duration-200">
-                <svg class="w-4 h-4 mr-2 fill-current text-emerald-400" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.013-5.112-2.861-6.963s-4.329-2.856-6.964-2.856c-5.44 0-9.866 4.421-9.87 9.86-.001 1.772.475 3.51 1.378 5.037L1.15 22.53l5.497-1.376z"/>
-                </svg>
-                <span>Konsultasi Gratis</span>
-            </a>
-        </div>
-
-        <div class="bg-slate-900 py-3 px-4 sm:px-8 flex justify-between items-center">
-            <a href="index.html" class="flex items-center block">
-                <img src="icon-header.png" alt="Logo Storefront" class="h-8 w-auto object-contain">
+    <header class="app-header">
+        <div class="header-nav container">
+            <a href="index.html" class="header-logo">
+                <img src="icon-header.png" alt="Logo Storefront">
             </a>
 
-            <div class="relative">
-                <button id="hamburger-btn" class="text-gray-400 hover:text-white focus:outline-none p-1" aria-label="Menu Utama">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="header-actions">
+                <a href="https://wa.me/6287888884049" target="_blank" class="btn-konsultasi">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.013-5.112-2.861-6.963s-4.329-2.856-6.964-2.856c-5.44 0-9.866 4.421-9.87 9.86-.001 1.772.475 3.51 1.378 5.037L1.15 22.53l5.497-1.376z"/>
+                    </svg>
+                    <span>Konsultasi Gratis</span>
+                </a>
+                <button id="hamburger-btn" class="btn-hamburger" aria-label="Menu Utama">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
+            </div>
 
-                <div id="hamburger-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 border border-slate-100 animate-fadeIn">
-                    <a href="index.html#tentang-kami" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">Tentang Kami</a>
-                    <a href="https://wa.me/628788884049" target="_blank" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors">Hubungi Admin</a>
-                </div>
+            <div id="hamburger-dropdown" class="mobile-menu hidden animate-fadeIn">
+                <a href="index.html#tentang-kami">Tentang Kami</a>
+                <a href="https://wa.me/628788884049" target="_blank">Hubungi Admin</a>
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-16">
+    <main class="product-detail-page container">
 
-        <div class="product-split-container lg:gap-8">
+        <div class="product-split-container">
 
-            <div class="product-media-column mb-8 lg:mb-0">
+            <div class="product-media-column">
                 <div class="unified-media-frame">
-                    <div class="media-swipe-badge">
-                        ← Geser untuk Foto / Video →
-                    </div>
-
                     <div class="media-slider-container">
                         <div class="media-slide">
                             <div class="video-container">
@@ -65,55 +57,59 @@
                         </div>
                     </div>
                 </div>
-                <p class="text-xs text-slate-400 mt-2 text-center italic">*Tips: Geser layar pada frame di atas untuk melihat preview gambar atau memutar video demonstrasi.</p>
+
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
 
             <div class="product-info-column">
-                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-md mb-3">Best Seller</span>
-                <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Dashboard Keuangan Premium</h1>
-                <p class="text-sm sm:text-base text-slate-500 mb-4 font-medium italic">"Kelola anggaran keuangan bisnis dan personal Anda secara otomatis, rapi, dan instan tanpa rumus rumit."</p>
+                <span class="badge-bestseller">Best Seller</span>
+                <h1 class="detail-title">Dashboard Keuangan Premium</h1>
+                <p class="detail-desc">"Kelola anggaran keuangan bisnis dan personal Anda secara otomatis, rapi, dan instan tanpa rumus rumit."</p>
 
-                <div class="bg-slate-100 p-4 rounded-xl mb-6 flex items-center justify-between">
+                <div class="price-card">
                     <div>
-                        <span class="text-xs text-slate-400 line-through block">Rp 299.000</span>
-                        <span class="text-2xl font-bold text-emerald-600">Rp 149.000</span>
+                        <span class="price-old">Rp 299.000</span>
+                        <span class="price-new">Rp 149.000</span>
                     </div>
-                    <span class="text-xs font-semibold text-rose-600 bg-rose-50 px-2 py-1 rounded">Diskon 50%</span>
+                    <span class="badge-discount">Diskon 50%</span>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-3 mb-8">
-                    <a href="https://lynk.id/username" target="_blank" class="flex-1 text-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-md shadow-emerald-500/20 premium-btn-transition block">
+                <div class="action-group">
+                    <a href="https://lynk.id/username" target="_blank" class="btn-buy-now">
                         Beli Instan via Lynk.id
                     </a>
-                    <a href="https://wa.me/628788884049" target="_blank" class="flex-1 text-center bg-slate-800 hover:bg-slate-900 text-white font-medium py-3.5 px-6 rounded-xl border border-slate-700 premium-btn-transition block">
+                    <a href="https://wa.me/628788884049" target="_blank" class="btn-ask-admin">
                         Tanya Admin via WA
                     </a>
                 </div>
 
-                <div class="border-b border-slate-200 mb-4">
-                    <nav class="flex space-x-6" aria-label="Tabs">
-                        <button id="tab-deskripsi-btn" onclick="switchTab('deskripsi')" class="tab-button active pb-4 text-sm font-medium text-slate-500 border-b-2 border-transparent">
+                <div class="tabs-wrapper">
+                    <nav class="tabs-nav" aria-label="Tabs">
+                        <button id="tab-deskripsi-btn" onclick="switchTab('deskripsi')" class="tab-button active">
                             Deskripsi
                         </button>
-                        <button id="tab-fitur-btn" onclick="switchTab('fitur')" class="tab-button pb-4 text-sm font-medium text-slate-500 border-b-2 border-transparent">
+                        <button id="tab-fitur-btn" onclick="switchTab('fitur')" class="tab-button">
                             Fitur Produk
                         </button>
                     </nav>
                 </div>
 
                 <div>
-                    <div id="content-deskripsi" class="tab-content active text-slate-600 text-sm leading-relaxed space-y-3">
+                    <div id="content-deskripsi" class="tab-content active">
                         <p>Template **Dashboard Keuangan Premium** ini dirancang khusus bagi para pelaku usaha mikro, freelancer, maupun pengelolaan internal keluarga yang membutuhkan pencatatan arus kas terstruktur tanpa harus pusing menyusun rumus Excel
                             dari nol.</p>
                         <p>Dengan integrasi mutakhir, Anda cukup memasukkan data transaksi harian, dan seluruh grafik visual performa pendapatan, pengeluaran, serta profit bersih akan ter-update secara otomatis secara real-time.</p>
                     </div>
 
-                    <div id="content-fitur" class="tab-content text-slate-600 text-sm leading-relaxed">
-                        <ul class="list-disc list-inside space-y-2">
-                            <li><strong class="text-slate-900">Otomatisasi Laporan:</strong> Input transaksi kas masuk & keluar, laporan bulanan langsung beres.</li>
-                            <li><strong class="text-slate-900">Grafik Interaktif:</strong> Visualisasi pie-chart untuk alokasi pengeluaran terbesar Anda.</li>
-                            <li><strong class="text-slate-900">Multi-Rekening:</strong> Memantau saldo terpisah antara rekening bank, e-wallet, dan cash fisik.</li>
-                            <li><strong class="text-slate-900">Lifetime Access:</strong> Sekali bayar, bebas pakai selamanya tanpa biaya langganan bulanan.</li>
+                    <div id="content-fitur" class="tab-content">
+                        <ul>
+                            <li><strong>Otomatisasi Laporan:</strong> Input transaksi kas masuk & keluar, laporan bulanan langsung beres.</li>
+                            <li><strong>Grafik Interaktif:</strong> Visualisasi pie-chart untuk alokasi pengeluaran terbesar Anda.</li>
+                            <li><strong>Multi-Rekening:</strong> Memantau saldo terpisah antara rekening bank, e-wallet, dan cash fisik.</li>
+                            <li><strong>Lifetime Access:</strong> Sekali bayar, bebas pakai selamanya tanpa biaya langganan bulanan.</li>
                         </ul>
                     </div>
                 </div>
@@ -122,12 +118,12 @@
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p class="text-sm text-center sm:text-left">&copy; 2026 Storefront Digital Premium. All rights reserved.</p>
-            <div class="flex space-x-6 text-sm">
-                <a href="index.html#tentang-kami" class="hover:text-white transition-colors">Tentang Kami</a>
-                <a href="https://wa.me/628788884049" target="_blank" class="hover:text-white transition-colors">Hubungi Admin</a>
+    <footer class="app-footer">
+        <div class="footer-content container">
+            <p class="footer-copyright">&copy; 2026 Storefront Digital Premium. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html#tentang-kami">Tentang Kami</a>
+                <a href="https://wa.me/628788884049" target="_blank">Hubungi Admin</a>
             </div>
         </div>
     </footer>
@@ -179,6 +175,26 @@
             // Klik di luar area menu untuk menutup otomatis dropdown
             document.addEventListener('click', () => {
                 hamburgerDropdown.classList.add('hidden');
+            });
+        }
+
+        // Fungsionalitas Indikator Slider (2 Titik)
+        const sliderContainer = document.querySelector('.media-slider-container');
+        const sliderDots = document.querySelectorAll('.slider-dots .dot');
+
+        if (sliderContainer && sliderDots.length > 0) {
+            sliderContainer.addEventListener('scroll', () => {
+                let scrollLeft = sliderContainer.scrollLeft;
+                let width = sliderContainer.clientWidth;
+                let index = Math.round(scrollLeft / width);
+
+                sliderDots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
             });
         }
     </script>

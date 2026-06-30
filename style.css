@@ -6,13 +6,54 @@
 
 /* 1. GLOBAL & CORE CONFIGURATIONS */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    font-family: sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hidden {
+    display: none !important;
 }
 
 
@@ -55,10 +96,354 @@ body {
 }
 
 
-/* 3. PINDAHAN CSS DARI PRODUK1.HTML (SPLIT-SCREEN & INFO PRODUK) */
+/* ==========================================================================
+   3. HEADER STYLES
+   ========================================================================== */
+
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #1e293b;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    position: relative;
+}
+
+.header-logo img {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-konsultasi {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #4b5563;
+    color: white;
+    padding: 0.375rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-konsultasi:hover {
+    background-color: #374151;
+}
+
+.btn-konsultasi svg {
+    width: 1rem;
+    height: 1rem;
+    color: #22c55e;
+    fill: currentColor;
+}
+
+.btn-hamburger {
+    color: #94a3b8;
+    padding: 0.375rem;
+    border-radius: 0.25rem;
+    transition: color 0.2s;
+}
+
+.btn-hamburger:hover {
+    color: white;
+}
+
+.btn-hamburger svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: currentColor;
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 1.5rem;
+    top: 100%;
+    margin-top: 0.5rem;
+    width: 12rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+    padding: 0.5rem 0;
+    z-index: 50;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #334155;
+    transition: background-color 0.2s;
+}
+
+.mobile-menu a:hover {
+    background-color: #f1f5f9;
+}
 
 
-/* Kontainer Split-Screen Halaman Detail */
+/* ==========================================================================
+   4. INDEX PAGE STYLES
+   ========================================================================== */
+
+.app-main {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+.hero-desc {
+    color: #475569;
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #10b981;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0d9488;
+}
+
+.catalog {
+    padding: 3rem 1.5rem;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 1px solid #f1f5f9;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    height: 12rem;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    color: #475569;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-secondary {
+    display: block;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #0f172a;
+}
+
+.testimonials {
+    padding: 4rem 1.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 2.5rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.review-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.review-text {
+    color: #475569;
+    font-style: italic;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.review-author {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1e293b;
+}
+
+
+/* ==========================================================================
+   5. FOOTER STYLES
+   ========================================================================== */
+
+.app-footer {
+    background-color: #1e293b;
+    color: white;
+    padding: 2rem 0;
+    border-top: 1px solid #0f172a;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+    }
+}
+
+.footer-copyright {
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* ==========================================================================
+   6. PRODUCT DETAIL PAGE (produk1.html)
+   ========================================================================== */
+
+.product-detail-page {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
 
 .product-split-container {
     display: block;
@@ -84,34 +469,14 @@ body {
     }
 }
 
-
-/* Wadah Video Responsif 16:9 Aspect Ratio */
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    /* 16:9 ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 0.75rem;
-    background-color: #000000;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+@media (max-width: 1023px) {
+    .product-media-column {
+        margin-bottom: 2rem;
+    }
 }
 
 
-/* 4. STRUKTUR FRAME BERSAMA (VIDEO + FOTO GESER / SLIDER) */
-
-
-/* Digunakan di produk1.html untuk menyatukan video utama dan foto ketika digeser */
+/* Frame Video & Slider Foto */
 
 .unified-media-frame {
     position: relative;
@@ -131,9 +496,6 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-
-/* Menyembunyikan scrollbar bawaan slider agar tetap clean di mobile */
-
 .media-slider-container::-webkit-scrollbar {
     display: none;
 }
@@ -145,8 +507,24 @@ body {
     position: relative;
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-color: #000000;
+}
 
-/* Wadah Pratinjau Foto Produk */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 .photo-preview-container {
     width: 100%;
@@ -161,7 +539,6 @@ body {
 
 @media (min-width: 640px) {
     .photo-preview-container {
-        /* Menyeimbangkan tinggi dengan aspek rasio video 16:9 */
         aspect-ratio: 16 / 9;
     }
 }
@@ -173,28 +550,173 @@ body {
 }
 
 
-/* Indikator Navigasi Geser (Swipe Indicator Badge) */
+/* Indikator Titik (Dots) */
 
-.media-swipe-badge {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    background-color: rgba(30, 41, 59, 0.8);
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.375rem 0.75rem;
-    border-radius: 9999px;
-    pointer-events: none;
-    z-index: 10;
-    backdrop-filter: blur(4px);
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.slider-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    transition: background-color 0.2s;
+}
+
+.slider-dots .dot.active {
+    background-color: #1e293b;
 }
 
 
-/* 5. TABS NAVIGATION & INTERACTIVE COMPONENTS */
+/* Informasi Produk */
+
+.badge-bestseller {
+    display: inline-block;
+    background-color: #d1fae5;
+    color: #065f46;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+}
+
+.detail-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .detail-title {
+        font-size: 1.875rem;
+    }
+}
+
+.detail-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+@media (min-width: 640px) {
+    .detail-desc {
+        font-size: 1rem;
+    }
+}
+
+.price-card {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-old {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+    display: block;
+}
+
+.price-new {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #059669;
+}
+
+.badge-discount {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #e11d48;
+    background-color: #fff1f2;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.action-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+    .action-group {
+        flex-direction: row;
+    }
+}
+
+.btn-buy-now {
+    flex: 1;
+    text-align: center;
+    background-color: #10b981;
+    color: white;
+    font-weight: 700;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    display: block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-buy-now:hover {
+    background-color: #059669;
+}
+
+.btn-buy-now:active {
+    transform: scale(0.98);
+}
+
+.btn-ask-admin {
+    flex: 1;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    font-weight: 500;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #334155;
+    display: block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-ask-admin:hover {
+    background-color: #0f172a;
+}
+
+.btn-ask-admin:active {
+    transform: scale(0.98);
+}
+
+
+/* Tab Informasi Produk */
+
+.tabs-wrapper {
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+.tabs-nav {
+    display: flex;
+    gap: 1.5rem;
+}
 
 .tab-button {
-    cursor: pointer;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
 }
 
@@ -206,6 +728,9 @@ body {
 
 .tab-content {
     display: none;
+    color: #475569;
+    font-size: 0.875rem;
+    line-height: 1.6;
 }
 
 .tab-content.active {
@@ -213,23 +738,20 @@ body {
     animation: fadeIn 0.3s ease-out forwards;
 }
 
-
-/* 6. ADDITIONAL UTILITIES */
-
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.tab-content p {
+    margin-bottom: 0.75rem;
 }
 
-
-/* Efek Hover Halus pada Tombol & Kartu Produk */
-
-.premium-btn-transition {
-    transition: transform 0.2s ease, background-color 0.2s ease;
+.tab-content ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
-.premium-btn-transition:active {
-    transform: scale(0.98);
+.tab-content li {
+    margin-bottom: 0.5rem;
+}
+
+.tab-content strong {
+    color: #0f172a;
 }

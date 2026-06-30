@@ -5,118 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etalase Produk Digital Premium</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-slate-50 min-h-screen text-slate-800 font-sans">
+<body>
 
-    <header class="fixed top-0 left-0 right-0 z-50 shadow-md">
-        <div class="bg-white py-2 flex justify-center items-center border-b border-gray-100">
-            <a href="https://wa.me/6287888884049" class="bg-gray-600 hover:bg-gray-700 text-white px-5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-2 transition-colors">
-                <svg class="w-4 h-4 text-green-500 fill-current" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.734-1.455L0 24zm6.59-4.846c1.655.981 3.51 1.5 5.409 1.5 5.415 0 9.82-4.397 9.823-9.798.002-2.618-1.017-5.08-2.868-6.931-1.851-1.852-4.311-2.873-6.93-2.875-5.422 0-9.827 4.398-9.83 9.799-.001 1.944.505 3.844 1.47 5.514L1.724 22.21l4.923-1.292zm11.758-6.976c-.301-.15-1.782-.879-2.056-.979-.275-.1-.475-.15-.675.15-.2.3-.775.979-.95 1.179-.175.2-.35.225-.651.075-1.041-.521-1.841-.951-2.57-2.199-.192-.328-.192-.612.012-.834.183-.199.35-.412.525-.618.175-.206.233-.353.35-.589.117-.235.058-.441-.029-.59-.088-.149-.675-1.628-.925-2.229-.244-.588-.493-.508-.675-.518-.174-.009-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.3-1.05 1.026-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.221 5.112 4.517.714.309 1.272.494 1.707.633.717.228 1.368.196 1.884.119.574-.085 1.782-.728 2.032-1.43.25-.702.25-1.303.175-1.43-.075-.127-.275-.227-.575-.377z"/>
-                </svg>
-                <span>Konsultasi Gratis</span>
+    <header class="app-header">
+        <div class="header-nav container">
+            <a href="index.html" class="header-logo">
+                <img src="icon-header.png" alt="Logo Header">
             </a>
-        </div>
-        <div class="bg-[#1e293b] px-6 py-3 flex justify-between items-center relative">
-            <a href="index.html" class="flex items-center transition-opacity hover:opacity-90">
-                <img src="icon-header.png" alt="Logo Header" class="h-8 w-auto">
-            </a>
-            <button id="hamburger-btn" class="text-gray-800 hover:text-gray-600 focus:outline-none p-1.5 bg-gray-200 rounded transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            
+            <div class="header-actions">
+                <a href="https://wa.me/6287888884049" class="btn-konsultasi">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.734-1.455L0 24zm6.59-4.846c1.655.981 3.51 1.5 5.409 1.5 5.415 0 9.82-4.397 9.823-9.798.002-2.618-1.017-5.08-2.868-6.931-1.851-1.852-4.311-2.873-6.93-2.875-5.422 0-9.827 4.398-9.83 9.799-.001 1.944.505 3.844 1.47 5.514L1.724 22.21l4.923-1.292zm11.758-6.976c-.301-.15-1.782-.879-2.056-.979-.275-.1-.475-.15-.675.15-.2.3-.775.979-.95 1.179-.175.2-.35.225-.651.075-1.041-.521-1.841-.951-2.57-2.199-.192-.328-.192-.612.012-.834.183-.199.35-.412.525-.618.175-.206.233-.353.35-.589.117-.235.058-.441-.029-.59-.088-.149-.675-1.628-.925-2.229-.244-.588-.493-.508-.675-.518-.174-.009-.374-.012-.574-.012-.2 0-.525.075-.8.375-.275.3-1.05 1.026-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.221 5.112 4.517.714.309 1.272.494 1.707.633.717.228 1.368.196 1.884.119.574-.085 1.782-.728 2.032-1.43.25-.702.25-1.303.175-1.43-.075-.127-.275-.227-.575-.377z"/>
+                    </svg>
+                    <span>Konsultasi Gratis</span>
+                </a>
+                <button id="hamburger-btn" class="btn-hamburger">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
 
-            <div id="mobile-menu" class="hidden absolute right-6 top-full mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-100 animate-fadeIn">
-                <a href="#tentang-kami" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Tentang Kami</a>
-                <a href="https://wa.me/6287888884049" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">Hubungi Admin</a>
+            <div id="mobile-menu" class="mobile-menu hidden animate-fadeIn">
+                <a href="#tentang-kami">Tentang Kami</a>
+                <a href="https://wa.me/6287888884049">Hubungi Admin</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-28 pb-16">
+    <main class="app-main">
 
-        <section class="max-w-7xl mx-auto px-6 py-16 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold text-[#1e293b] mb-4 tracking-tight leading-tight">
+        <section class="hero container">
+            <h1 class="hero-title">
                 Tingkatkan Produktivitas & Kendalikan Finansial Anda dengan Template Digital Premium
             </h1>
-            <p class="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+            <p class="hero-desc">
                 Solusi praktis siap pakai untuk mengelola bisnis, perawatan kendaraan, serta upskilling profesional Anda.
             </p>
-            <a href="#katalog-produk" class="inline-block bg-[#10b981] hover:bg-[#0d9488] text-white font-semibold px-8 py-3 rounded-lg shadow-md transition-colors">
+            <a href="#katalog-produk" class="btn-primary">
                 Lihat Katalog Produk
             </a>
         </section>
 
-        <section id="katalog-produk" class="max-w-7xl mx-auto px-6 py-12">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section id="katalog-produk" class="catalog container">
+            <div class="grid-4">
 
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                    <div class="h-48 bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img id="produk-1-img" alt="Dashboard Keuangan" class="w-full h-full object-cover">
+                <div class="card">
+                    <div class="card-img">
+                        <img id="produk-1-img" alt="Dashboard Keuangan">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div class="card-body">
                         <div>
-                            <h3 class="font-bold text-lg text-[#1e293b] mb-2">Dashboard Keuangan</h3>
-                            <p class="text-slate-600 text-sm line-clamp-2 mb-4">
+                            <h3 class="card-title">Dashboard Keuangan</h3>
+                            <p class="card-desc line-clamp-2">
                                 Kelola seluruh arus kas, pemasukan, dan pengeluaran secara otomatis dengan visualisasi grafik yang rapi.
                             </p>
                         </div>
-                        <a href="produk1.html" class="block text-center bg-[#1e293b] text-white text-sm font-medium py-2 rounded-lg hover:bg-slate-800 transition-colors">
+                        <a href="produk1.html" class="btn-secondary">
                             Pelajari Selengkapnya
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                    <div class="h-48 bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img id="produk-2-img" alt="Motocare Perawatan Motor" class="w-full h-full object-cover">
+                <div class="card">
+                    <div class="card-img">
+                        <img id="produk-2-img" alt="Motocare Perawatan Motor">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div class="card-body">
                         <div>
-                            <h3 class="font-bold text-lg text-[#1e293b] mb-2">Motocare Perawatan Motor</h3>
-                            <p class="text-slate-600 text-sm line-clamp-2 mb-4">
+                            <h3 class="card-title">Motocare Perawatan Motor</h3>
+                            <p class="card-desc line-clamp-2">
                                 Catat riwayat servis, penggantian oli, dan komponen motor berkala agar performa mesin tetap prima.
                             </p>
                         </div>
-                        <a href="produk2.html" class="block text-center bg-[#1e293b] text-white text-sm font-medium py-2 rounded-lg hover:bg-slate-800 transition-colors">
+                        <a href="produk2.html" class="btn-secondary">
                             Pelajari Selengkapnya
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                    <div class="h-48 bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img id="produk-3-img" alt="Saku Siswa" class="w-full h-full object-cover">
+                <div class="card">
+                    <div class="card-img">
+                        <img id="produk-3-img" alt="Saku Siswa">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div class="card-body">
                         <div>
-                            <h3 class="font-bold text-lg text-[#1e293b] mb-2">Saku Siswa</h3>
-                            <p class="text-slate-600 text-sm line-clamp-2 mb-4">
+                            <h3 class="card-title">Saku Siswa</h3>
+                            <p class="card-desc line-clamp-2">
                                 Template pengelolaan uang saku dan tabungan interaktif yang dirancang khusus bagi pelajar & mahasiswa.
                             </p>
                         </div>
-                        <a href="produk3.html" class="block text-center bg-[#1e293b] text-white text-sm font-medium py-2 rounded-lg hover:bg-slate-800 transition-colors">
+                        <a href="produk3.html" class="btn-secondary">
                             Pelajari Selengkapnya
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                    <div class="h-48 bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img id="produk-4-img" alt="Kelas Privat Rumus Excel" class="w-full h-full object-cover">
+                <div class="card">
+                    <div class="card-img">
+                        <img id="produk-4-img" alt="Kelas Privat Rumus Excel">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div class="card-body">
                         <div>
-                            <h3 class="font-bold text-lg text-[#1e293b] mb-2">Kelas Privat Rumus Excel</h3>
-                            <p class="text-slate-600 text-sm line-clamp-2 mb-4">
+                            <h3 class="card-title">Kelas Privat Rumus Excel</h3>
+                            <p class="card-desc line-clamp-2">
                                 Kuasai rumus esensial Excel dari nol hingga tingkat mahir untuk meningkatkan efisiensi kerja harian Anda.
                             </p>
                         </div>
-                        <a href="produk4.html" class="block text-center bg-[#1e293b] text-white text-sm font-medium py-2 rounded-lg hover:bg-slate-800 transition-colors">
+                        <a href="produk4.html" class="btn-secondary">
                             Pelajari Selengkapnya
                         </a>
                     </div>
@@ -125,32 +125,32 @@
             </div>
         </section>
 
-        <section id="tentang-kami" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-100">
-            <h2 class="text-2xl font-bold text-center text-[#1e293b] mb-10">Ulasan Pengguna Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                    <p class="text-slate-600 italic text-sm mb-4">"Template Keuangannya sangat membantu mendata pengeluaran bulanan bisnis kecil saya jadi lebih rapi."</p>
-                    <h4 class="font-semibold text-sm text-[#1e293b]">- Aris, Pemilik UMKM</h4>
+        <section id="tentang-kami" class="testimonials container">
+            <h2 class="section-title">Ulasan Pengguna Kami</h2>
+            <div class="grid-3">
+                <div class="review-card">
+                    <p class="review-text">"Template Keuangannya sangat membantu mendata pengeluaran bulanan bisnis kecil saya jadi lebih rapi."</p>
+                    <h4 class="review-author">- Aris, Pemilik UMKM</h4>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                    <p class="text-slate-600 italic text-sm mb-4">"Penjelasan materi privat Excel sangat to the point, sekarang tugas administrasi kantor jadi beres sekejap."</p>
-                    <h4 class="font-semibold text-sm text-[#1e293b]">- Maya, Staff Administrasi</h4>
+                <div class="review-card">
+                    <p class="review-text">"Penjelasan materi privat Excel sangat to the point, sekarang tugas administrasi kantor jadi beres sekejap."</p>
+                    <h4 class="review-author">- Maya, Staff Administrasi</h4>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                    <p class="text-slate-600 italic text-sm mb-4">"Sistem tracker di Motocare pas banget buat saya yang pelupa urusan jadwal ganti oli rutin."</p>
-                    <h4 class="font-semibold text-sm text-[#1e293b]">- Rian, Pengendara Harian</h4>
+                <div class="review-card">
+                    <p class="review-text">"Sistem tracker di Motocare pas banget buat saya yang pelupa urusan jadwal ganti oli rutin."</p>
+                    <h4 class="review-author">- Rian, Pengendara Harian</h4>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-[#1e293b] text-white py-8 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-sm text-slate-400">&copy; 2026 Etalase Premium Store. Hak Cipta Dilindungi.</p>
-            <div class="flex gap-6 text-sm">
-                <a href="#tentang-kami" class="text-slate-400 hover:text-white transition-colors">Tentang Kami</a>
-                <a href="https://wa.me/6287888884049" class="text-slate-400 hover:text-white transition-colors">Hubungi Admin</a>
+    <footer class="app-footer">
+        <div class="footer-content container">
+            <p class="footer-copyright">&copy; 2026 Etalase Premium Store. Hak Cipta Dilindungi.</p>
+            <div class="footer-links">
+                <a href="#tentang-kami">Tentang Kami</a>
+                <a href="https://wa.me/6287888884049">Hubungi Admin</a>
             </div>
         </div>
     </footer>
